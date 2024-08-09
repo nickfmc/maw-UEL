@@ -1,0 +1,18 @@
+{
+  "builder": { "enabled": false },
+  "users": { "ids": [1], "roles": [] },
+  "assets": {
+    "enqueue": true,
+    "minify": { "css": false, "js": false },
+    "process": { "scss": false, "scssFiles": true }
+  },
+  "editor": {
+    "formatOnSave": false,
+    "library": false,
+    "assets": [],
+    "markup": false
+  },
+  "tailwind": { "enabled": false, "customClasses": [] },
+  "blockEditor": { "disableLoading": false },
+  "library": true
+}

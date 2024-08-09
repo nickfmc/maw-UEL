@@ -1,0 +1,16 @@
+{
+    "name": "acf/fullimage-block",
+    "title": "Full image",
+    "description": "Custom full image",
+    "icon": "admin-comments",
+    "keywords": ["img", "image", "fullimage", "full image", "blocks", "button"],
+    "category": "myblocks",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "fullimage.php"
+    },
+    "example": {
+        "attributes": {}
+    },
+    "align": "full"
+}

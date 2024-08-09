@@ -14,6 +14,9 @@
 
   <?php wp_head(); // wordpress head functions -- DONOTREMOVE ?>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <?php // START Google Analytics here ?>
   <?php // END Analytics ?>
 </head>
@@ -21,6 +24,7 @@
 <body <?php body_class(pretty_body_class()); ?> itemscope itemtype="https://schema.org/WebPage">
 
   <header id="c-page-header" class="o-section c-page-header" role="banner" itemscope itemtype="https://schema.org/WPHeader">
+    
     <div class="o-wrapper-wide  u-relative">
       <?php get_template_part( 'template-part/header/logo' ); ?>
       <?php get_template_part( 'template-part/navigation/nav-main' ); ?>
@@ -49,11 +53,11 @@
             <div class="c-modal-nav-header">
               <div class="c-modal-nav-logo">
                 <a href="/" rel="nofollow">
-                  <img src="<?php bloginfo('template_url') ?>/img/logo.svg" alt="<?php bloginfo('name'); ?>" />
+                  <img src="<?php bloginfo('template_url') ?>/img/logo-color.svg" alt="<?php bloginfo('name'); ?>" />
                 </a>
               </div> <!-- /c-main-logo -->
             </div>
-              <?php  gdt_nav_menu( 'mobile-menu', 'c-mobile-menu' ); // Adjust using Menus in WordPress Admin ?>
+              <?php  gdt_nav_menu( 'main-menu', 'c-mobile-menu' ); // Adjust using Menus in WordPress Admin ?>
             </nav>
           </div> <!-- /modal-nav-wrap -->
       </div>

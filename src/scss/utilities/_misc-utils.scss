@@ -25,7 +25,10 @@
   text-align: center;
 }
 
-
+.u-full-nopad {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
 // ++ media or embed aspect ratio +++++++++++++++++++++++++++++++++
 .u-aspect-16x9 {
   padding-bottom: 56.25%; /* (9 / 16 = 0.5625) */

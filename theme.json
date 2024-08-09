@@ -32,13 +32,13 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#00838f",
+					"color": "#e38432",
 					"name": "Primary"
 				},
 				{
-					"slug": "secondary",
-					"color": "#4fb3bf",
-					"name": "Secondary" 
+					"slug": "ralmax",
+					"color": "#387FB7",
+					"name": "Ralmax Blue" 
 				},
 				{
 					"slug": "transparent",

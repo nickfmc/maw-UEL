@@ -3,25 +3,152 @@
    ========================================================================== */
 
 .c-page-footer {
-  padding-top: 100px;
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+}
 
+.c-page-footer-topper {
+background-color: #333;
+padding-top: 60px;
+padding-bottom: 60px;
+padding-right: 25px;
+padding-left: 25px;
+color: #fff;
 }
 
 .c-page-footer-upper {
-  background-color: $color-gray-light;
+  background-color: $color-primary;
   padding-left: 25px;
-  padding-right: 25px;
-  padding-bottom: 100px;
+  padding-right: 25px; 
+  padding-top: 60px;
+  padding-bottom: 150px;
+  color: #fff;
+  background-image: url('../img/wave_white.svg');
+  background-repeat: repeat-x;
+  background-position: bottom -70px center;
+  background-size: 250px;
 }
 
 .c-page-footer-lower {
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
+  text-align: center;
+  color: #777777;
   padding-left: 25px;
   padding-right: 25px;
-  font-size: 15px;
+  font-size: 14px;
   > div {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
+}
+
+.c-page-footer-topper--intro {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+
+  
+  p {
+    font-size: 15px;
+  }
+}
+
+.c-page-footer-topper-cert {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  display: none;
+  @media(width >= $bp-medium) {
+  display: flex;
+  } 
+  div {
+    width: 100px;
+  }
+}
+
+
+.c-ralmax-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  max-height: 3px;
+  transition: max-height 1s ease-out;
+  position: fixed;
+  bottom: 0;
+  
+
+}
+
+
+.c-ralmax-group {
+  transition: transform 0.5s ease-out; /* Smooth transition for moving up */
+  position: absolute;
+  left: 0;
+  background: #fff;
+  top: -51px;
+
+  width: 160px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+  /* Responsive adjustment */
+  @media (min-width: $bp-medium) {
+    width: 204px;
+  }
+
+  img {
+    padding: 10px;
+  }
+}
+
+
+
+.c-ralmax-links {
+  background-color: $color-ralmax-blue;
+  border-top: 3px solid $color-ralmax-blue;
+  // min-height: 100px;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+
+  
+
+img {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+div {
+  padding: 30px;
+  font-size: 14px;
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+}
+
+// When visible, increase max-height and opacity
+.c-ralmax-wrapper.is-visible {
+  max-height: 500px; // Adjust based on content size
+  opacity: 1;
 }

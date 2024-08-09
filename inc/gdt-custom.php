@@ -14,6 +14,11 @@
 global $content_width;
 $content_width = 1180;
 
+const BLOCKSTUDIO_LICENSE = "76a8a115fbc06ead705ea0e24cd9a081";
+add_filter('blockstudio/settings/users/ids', function() {
+  return [1];
+});
+
 // ****************** Grab custom data and input into Generate Block headline field ************
 
                   // function custom_field_gb_query() {

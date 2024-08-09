@@ -20,7 +20,7 @@ align-self: stretch;
 form {
 
 
-input {
+input, textarea {
 
 display: flex;
 padding: 10px 14px;
@@ -42,4 +42,11 @@ color:  #667085;
 text-overflow: ellipsis;
 }
 }
+}
+
+.piotnetforms-button {
+  background-color: $color-primary !important;
+  &:hover {
+    background-color: lighten($color-primary, 10%) !important;
+  }
 }

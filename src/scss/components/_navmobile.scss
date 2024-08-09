@@ -54,7 +54,7 @@ html.has-modal-nav-open {
 }
 
 .c-cl-mobile-nav button.c-close-modal-nav, .c-cl-mobile-nav button.c-modal-nav-button {
-    background: $menu-white;
+    background: $color-primary;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -62,14 +62,24 @@ html.has-modal-nav-open {
     padding: $menu-spacing-small;
     margin: 0;
     position: absolute;
-    right: $menu-spacing-small;
-    top: $menu-spacing-small;
+    right:-15px;
+    top: 34px;
     vertical-align: middle;
+    @media(width >= $bp-medium) {
+        top: 40px;
+    
+    } 
     & svg {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
+        fill: #fff;
         transition: all $transition-fast;
     }
+}
+
+.c-cl-mobile-nav button.c-close-modal-nav {
+        top: 20px !important;
+        right: 20px !important;
 }
 
 .c-cl-mobile-nav .x-body-wrapper {

@@ -3,3 +3,72 @@
    ========================================================================== */
 
 // ideally this file is forever blank. likely it won't be. :(
+
+.c-text-button {
+   position: relative;
+   &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 3px;
+      background: #fff;
+      transition: width .3s;
+      position: absolute;
+      bottom: -2px;
+      z-index: 10;
+  }
+  
+  &:hover::after {
+      width: 100%;
+      //transition: width .3s;
+  }
+}
+
+.c-text-button-onblue.c-text-button::after {
+background-color: $color-ralmax-blue;
+}
+
+
+.c-tab-button {
+   transition: $transition-ease;
+   position: relative;
+   &::after {
+      content: "";
+      height: 2px;
+      background-color: $color-primary;
+      width: 100%;
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      z-index: 10;
+   }
+   > div {
+      position: relative;
+      transition: $transition-ease;
+      top: 0;
+   }
+   &:hover {
+      > div {
+         transition: $transition-ease;
+        
+         top: -20px;
+      }
+   }
+}
+
+.c-lower-cta {
+   position: relative;
+   &::after {
+      content: "";
+      height: 2px;
+      background-color: $color-primary;
+      width: 120px;
+      position: absolute;
+      top: 50%;
+      left: -100px;
+      @media(width >= $bp-medium) {
+         width: 200px;
+      } 
+   }
+}
+

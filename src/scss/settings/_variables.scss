@@ -1,3 +1,4 @@
+
 /* ==========================================================================
    VARIABLES
    ========================================================================== */
@@ -12,7 +13,7 @@ $bp-xlarge: 1320px;
 // Match these to your theme.json layout settings.
 // Also check the setting of any block plugins you use to match these.
 // Keep the same, depricating wide usage.
-$wrapper-width-wide: 1180px; // Gutenberg Wide wrapper
+$wrapper-width-wide: 1300px; // Gutenberg Wide wrapper
 $wrapper-width-base: 1180px;  // Gutenberg Standard wrapper
 // Match these to your theme.json layout settings.
 
@@ -25,12 +26,14 @@ $page-header-height: 100px;
 // ++ COLOURS +++++++++++++++++++++++++++++++++
 $color-red:         #A82313;
  
-$color-primary:       #460f5f; 
+$color-primary:       #e38432; 
+$color-primary-dark:    #aa5f1e; 
 $color-secondary:       #460f5f;
+$color-ralmax-blue:     #387FB7;
 
 $color-gray-light:        #EAEAEA;
 $color-gray-med:        #ACACAC;
-$color-gray-dark:        #323232;
+$color-gray-dark:        #333333;
 
 $color-black:           #000;
 $color-white:           #FFF;
@@ -38,8 +41,8 @@ $color-white:           #FFF;
 // assign colours to variables
 $alert-color:       $color-red;
 $text-color:        $color-black;
-$link-color:        $color-secondary;
-$link-hover:        $color-gray-dark;
+$link-color:        $color-primary;
+$link-hover:        $color-primary-dark;
 $border-color:      $color-gray-med;
 $heading-color:     $color-gray-dark;
 
@@ -53,8 +56,8 @@ $logo-size: 300px;
 
 // ++ TYPOGRAPHY +++++++++++++++++++++++++++++++++
 // Fonts
-$font-primary: 'rubik', sans-serif;
-$font-secondary: 'rubik', serif;
+$font-primary: 'Fira Sans', sans-serif;
+$font-secondary: 'Fira Sans', sans-serif;
 
 // Spacing
 $line-height-normal: 1.50;

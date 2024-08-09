@@ -2,15 +2,32 @@
    HEADER
    ========================================================================== */
 
+
+.c-ralmax-links.is-visible {
+  max-height: 1000px; /* Adjust based on content */
+   transition: max-height 1.7s ease-in;
+}
+
+
 .c-page-header {
   background: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   height: 100px;  
   padding-left: 25px;
   padding-right: 25px;
+  position: relative;
   // enable styles below for usage with headroom.js
   // position: fixed;
   // top: 0;
   // width: 100%;
   // z-index: z(overlay);
+}
+
+
+
+.c-hero-text {
+position: absolute !important;
+bottom: 0;
+right: 50px;
+z-index: 10;
 }

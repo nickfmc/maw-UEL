@@ -145,28 +145,26 @@ $paddingHorizontal: 25px;
 // ++ ul list block (with custom class added) +++++++++++++++++++++++++++++++++
 .editor-content ul {
   list-style-type: none;
-  margin: 1rem 0 1rem 20px;
+  margin: 1rem 0 1rem 8px;
   padding: 0;
   overflow: hidden;
-  @media(width >= $bp-large) {
-  margin-left: 30px;
-  } 
+ 
 }
 .editor-content ul li {
   margin: 0;
-  padding: 0 0 10px 12px;
+  padding: 0 0 10px 25px;
   position: relative;
-  font-size: clamped(16px, 18px);
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 .editor-content ul li::before {
   display: block; 
-  background-color: #333;
+  background-color: $color-primary;
   content: "";
 	position: absolute;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  top: 0.58em;
+  width: 15px;
+  height: 2px;
+  top: 10px;
   left: 0;
 }
 

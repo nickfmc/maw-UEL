@@ -129,6 +129,8 @@ menuItems.forEach(function(menuItem) {
 
 
 
+
+
 // // ACCORDION VERSION ////////////////////
 // // Get all the menu items that have a submenu
 // var menuItems = document.querySelectorAll('.c-mobile-menu .menu-item-has-children');
@@ -182,13 +184,46 @@ menuItems.forEach(function(menuItem) {
 // // ACCORDION VERSION ////////////////////
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.c-ralmax-group a').forEach(function(element) {
+    element.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default anchor action
+      document.querySelector('.c-ralmax-wrapper').classList.toggle('is-visible');
+    });
+  });
+});
 
-
-
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM fully loaded and parsed');
+  document.addEventListener('click', function(event) {
+    if (event.target.matches('.c-ralmax-group a')) {
+      event.preventDefault(); // Prevent the default anchor action
+      const links = document.querySelector('.c-ralmax-wrapper'); 
+      if (links) {
+        links.classList.toggle('is-visible');
+        console.log('Toggle class `is-visible` for .c-ralmax-wrapper');
+      } else {
+        console.log('.c-ralmax-wrapper element not found');
+      }
+    } else {
+      // Check if the click is outside of .c-ralmax-wrapper or .c-ralmax-group
+      const isOutside = !event.target.closest('.c-ralmax-wrapper, .c-ralmax-group');
+      if (isOutside) {
+        const links = document.querySelector('.c-ralmax-wrapper');
+        if (links && links.classList.contains('is-visible')) {
+          links.classList.remove('is-visible');
+          console.log('Removed `is-visible` class from .c-ralmax-wrapper');
+        }
+      }
+    }
+  });
+});
 
 
 // *********************** START CUSTOM JQUERY DOC READY SCRIPTS *******************************
 jQuery( document ).ready(function( $ ) {
+
+ 
 
    // get Template URL
    var templateUrl = object_name.templateUrl;
