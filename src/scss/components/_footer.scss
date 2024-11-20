@@ -7,6 +7,10 @@ a {
   color: #fff;
   text-decoration: underline;
 }
+
+.cell {
+  padding: 0 10px;
+}
 }
 
 .c-page-footer-topper {
@@ -42,17 +46,16 @@ color: #fff;
     padding-top: 8px;
     padding-bottom: 8px;
   }
+  @media(width <= 730px) {
+  padding-bottom: 50px;
+  } 
 }
 
 .c-page-footer-topper--intro {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 
-  
-  p {
-    font-size: 15px;
-  }
 }
 
 .c-page-footer-topper-cert {
@@ -92,7 +95,7 @@ color: #fff;
   position: absolute;
   left: 0;
   background: #fff;
-  top: -51px;
+  top: -44px;
 
   width: 160px;
   z-index: 1000;
@@ -101,6 +104,7 @@ color: #fff;
   /* Responsive adjustment */
   @media (min-width: $bp-medium) {
     width: 204px;
+    top: -51px;
   }
 
   img {

@@ -46,12 +46,17 @@ background-color: $color-ralmax-blue;
       position: relative;
       transition: $transition-ease;
       top: 0;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      
    }
    &:hover {
       > div {
          transition: $transition-ease;
-        
+        background:  $color-primary;
          top: -20px;
+         p {
+            // color: $color-primary;
+         }
       }
    }
 }
@@ -72,3 +77,8 @@ background-color: $color-ralmax-blue;
    }
 }
 
+.editor-content .wpgb-button-facet ul {
+   li::before {
+      display: none;
+   }
+}

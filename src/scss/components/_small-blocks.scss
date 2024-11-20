@@ -56,6 +56,7 @@
     @media(width <= $bp-medium) {
       position: relative;
       margin-bottom: 30px;
+      margin-top: 30px;
       width: 100% !important;
       
     }
@@ -132,4 +133,19 @@
        margin: 0;
        font-style: italic;
     }
+ }
+
+ .c-hover-text-wrapper {
+   overflow: hidden;
+ }
+
+ .c-hover-text {
+   position: absolute;
+  bottom: 0;
+  color: #fff;
+  background: rgba(0,0,0,0.8);
+  padding: 15px 20px 0px;
+  p {
+   font-size: 16px;
+  }
  }

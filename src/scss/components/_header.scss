@@ -27,7 +27,16 @@
 
 .c-hero-text {
 position: absolute !important;
-bottom: 0;
-right: 50px;
+bottom: 40px;
 z-index: 10;
+@media(width >= $bp-large) {
+  right: 50px;
+  bottom: 0;
+
+} 
+@media(width <= $bp-large) {
+h1 {
+  font-size: 32px;
+}
+} 
 }

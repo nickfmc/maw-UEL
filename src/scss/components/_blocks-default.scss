@@ -154,7 +154,7 @@ $paddingHorizontal: 25px;
   margin: 0;
   padding: 0 0 10px 25px;
   position: relative;
-  font-size: 1rem;
+  font-size: 18px;
   margin-bottom: 10px;
 }
 .editor-content ul li::before {
@@ -192,6 +192,7 @@ $paddingHorizontal: 25px;
   text-indent: 0; 
   font-size: clamped(16px, 17px);
   list-style: none; 
+  font-size: 18px;
 }
 
 .editor-content ol > li::before {

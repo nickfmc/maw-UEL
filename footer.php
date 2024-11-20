@@ -2,9 +2,7 @@
   <div class="c-page-footer-topper">
       <div class="o-wrapper-wide">
         <div class="c-page-footer-topper--intro">
-        <p><strong>ASME-certified</strong> 
-         We manufacture and design pressure vessels, modules, piping, heat exchangers, and steel and stainless-steel tanks, ensuring every product meets rigorous certification requirements.
-        </p>
+        <p>We prioritize the health and safety of our employees and the environment. We maintain the highest industry certification standards and our business practices consistently exceed regulatory requirements.</p>
         </div>
           <div class="c-page-footer-topper-cert">
             <?php if( have_rows('certifications', 'options') ): ?>
@@ -20,7 +18,7 @@
             ?>
             </div>
             <?php endwhile; ?>
-            <?php endif; ?>
+            <?php endif; ?> 
           </div>
         
       </div>
@@ -77,9 +75,7 @@
       </div>
     
       <div class="c-ralmax-links">
-        <div><a href="https://ralmax.com" target="_blank">
-        <img src="<?php bloginfo( 'template_url' ) ?>/img/ralmax-logo-full.svg" alt="Ralmax Logo" />
-        </a><p><a href="https://ralmax.com" target="_blank">Ralmax Group of Companies</a> is a diversified group of local industrial businesses focused in and around Victoria's working harbour. The Ralmax Group is also a partner in Salish Sea Industrial Services Ltd. with the Songhees and Esquimalt Nations.</p>
+        <div><p><a href="https://ralmax.com" target="_blank">Ralmax Group of Companies</a> is a diversified group of local industrial businesses focused in and around Victoria's working harbour. The Ralmax Group is also a partner in Salish Sea Industrial Services Ltd. with the Songhees and Esquimalt Nations.</p>
       </div>
     </div>
   </div>
@@ -92,3 +88,4 @@
 
 </body>
 </html>
+ 

@@ -3831,6 +3831,7 @@ p {
   line-height: 1.5;
   margin: 0 0 1rem 0;
   padding: 0;
+  font-size: 18px;
 }
 
 /* ==========================================================================
@@ -4034,7 +4035,7 @@ p {
   margin: 0;
   padding: 0 0 10px 25px;
   position: relative;
-  font-size: 1rem;
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
@@ -4069,6 +4070,7 @@ p {
   text-indent: 0;
   font-size: clamp(1rem, 0.1vw + 0.98rem, 1.06rem);
   list-style: none;
+  font-size: 18px;
 }
 
 .editor-content ol > li::before {
@@ -4221,6 +4223,9 @@ p {
   color: #fff;
   text-decoration: underline;
 }
+.c-page-footer .cell {
+  padding: 0 10px;
+}
 
 .c-page-footer-topper {
   background-color: #333;
@@ -4256,14 +4261,16 @@ p {
   padding-top: 8px;
   padding-bottom: 8px;
 }
+@media (width <= 730px) {
+  .c-page-footer-lower {
+    padding-bottom: 50px;
+  }
+}
 
 .c-page-footer-topper--intro {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
-}
-.c-page-footer-topper--intro p {
-  font-size: 15px;
 }
 
 .c-page-footer-topper-cert {
@@ -4315,7 +4322,7 @@ p {
   position: absolute;
   left: 0;
   background: #fff;
-  top: -51px;
+  top: -44px;
   width: 160px;
   z-index: 1000;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -4325,6 +4332,7 @@ p {
 @media (min-width: 768px) {
   .c-ralmax-group {
     width: 204px;
+    top: -51px;
   }
 }
 .c-ralmax-group img {
@@ -4405,9 +4413,19 @@ p {
 
 .c-hero-text {
   position: absolute !important;
-  bottom: 0;
-  right: 50px;
+  bottom: 40px;
   z-index: 10;
+}
+@media (width >= 992px) {
+  .c-hero-text {
+    right: 50px;
+    bottom: 0;
+  }
+}
+@media (width <= 992px) {
+  .c-hero-text h1 {
+    font-size: 32px;
+  }
 }
 
 .c-stamp-top {
@@ -4470,6 +4488,7 @@ p {
   .c-full-img {
     position: relative;
     margin-bottom: 30px;
+    margin-top: 30px;
     width: 100% !important;
   }
 }
@@ -4552,6 +4571,21 @@ p {
 .c-image-caption-full p {
   margin: 0;
   font-style: italic;
+}
+
+.c-hover-text-wrapper {
+  overflow: hidden;
+}
+
+.c-hover-text {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px 20px 0px;
+}
+.c-hover-text p {
+  font-size: 16px;
 }
 
 /* ==========================================================================
@@ -6294,13 +6328,15 @@ html.has-modal-nav-open {
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease;
   top: 0;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .c-tab-button:hover > div {
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease;
+  background: #e38432;
   top: -20px;
 }
-
 .c-lower-cta {
   position: relative;
 }
@@ -6317,6 +6353,10 @@ html.has-modal-nav-open {
   .c-lower-cta::after {
     width: 200px;
   }
+}
+
+.editor-content .wpgb-button-facet ul li::before {
+  display: none;
 }
 
 /* ==========================================================================
