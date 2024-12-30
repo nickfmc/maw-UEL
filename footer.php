@@ -2,7 +2,8 @@
   <div class="c-page-footer-topper">
       <div class="o-wrapper-wide">
         <div class="c-page-footer-topper--intro">
-        <p>We prioritize the health and safety of our employees and the environment. We maintain the highest industry certification standards and our business practices consistently exceed regulatory requirements.</p>
+          <?php if( get_field('certification_intro', 'options') ) { echo get_field('certification_intro', 'options') ; }?>
+
         </div>
           <div class="c-page-footer-topper-cert">
             <?php if( have_rows('certifications', 'options') ): ?>
@@ -16,6 +17,7 @@
              echo wp_get_attachment_image($image, $size);
             }
             ?>
+            <?php if( get_sub_field('logo_title') ) { echo '<span class="mt-2 mb-0">' . get_sub_field('logo_title') . '</span>'; }?>
             </div>
             <?php endwhile; ?>
             <?php endif; ?> 

@@ -220,6 +220,57 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// tooltips
+document.addEventListener('DOMContentLoaded', function() {
+    const tooltipContainers = document.querySelectorAll('.c-page-footer-topper-cert div');
+    
+    function adjustTooltipPosition(container, tooltip) {
+        // Reset position
+        container.removeAttribute('data-position');
+        tooltip.style.left = '';
+        tooltip.style.right = '';
+        tooltip.style.transform = 'translateX(-50%) translateY(10px)';
+        
+        // Get measurements after reset
+        const containerRect = container.getBoundingClientRect();
+        const tooltipRect = tooltip.getBoundingClientRect();
+        const viewportWidth = window.innerWidth;
+        const padding = 10; // Buffer from viewport edge
+        
+        // Check right edge
+        if (tooltipRect.right + padding > viewportWidth) {
+            container.setAttribute('data-position', 'right');
+            tooltip.style.left = 'auto';
+            tooltip.style.right = '0';
+            tooltip.style.transform = 'translateY(10px)';
+        }
+        // Check left edge
+        else if (tooltipRect.left - padding < 0) {
+            container.setAttribute('data-position', 'left');
+            tooltip.style.left = '0';
+            tooltip.style.transform = 'translateY(10px)';
+        }
+    }
+    
+    tooltipContainers.forEach(container => {
+        const tooltip = container.querySelector('span');
+        
+        // Check position on hover
+        container.addEventListener('mouseenter', () => {
+            adjustTooltipPosition(container, tooltip);
+        });
+
+        // Also check position on window resize
+        window.addEventListener('resize', () => {
+            if (container.matches(':hover')) {
+                adjustTooltipPosition(container, tooltip);
+            }
+        });
+    });
+});
+
+
+
 // *********************** START CUSTOM JQUERY DOC READY SCRIPTS *******************************
 jQuery( document ).ready(function( $ ) {
 

@@ -24,9 +24,11 @@
 @import "./scss/elements/_paragraph.scss";
 
 
+
 // ++ COMPONENTS TO IMPORT +++++++++++++++++++++++++++++++++
 @import "./scss/components/_buttons.scss";
 @import "./scss/components/_small-blocks.scss";
+@import "./scss/components/_blocks-default.scss"; 
 
 
 // ++ UTILITIES +++++++++++++++++++++++++++++++++
@@ -152,4 +154,33 @@ body .wp-block-column {
 		margin-left: auto;
 		margin-right: auto;
 	}
+}
+
+
+/* Editor-specific styles */
+.is-admin.c-full-img {
+    // position: relative !important;
+    height: auto !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 20px 0;
+}
+
+.is-admin.c-full-img img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.block-placeholder {
+    background: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border: 2px dashed #ccc;
+}
+
+.c-image-caption {
+    margin-top: 10px;
+    font-style: italic;
 }

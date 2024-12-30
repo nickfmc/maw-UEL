@@ -52,7 +52,7 @@ color: #fff;
 }
 
 .c-page-footer-topper--intro {
-  max-width: 900px;
+  // max-width: 900px;
   margin: 0 auto;
   text-align: center;
 
@@ -69,7 +69,16 @@ color: #fff;
   display: flex;
   } 
   div {
-    width: 100px;
+    max-width: 180px;
+    img {
+      max-width: 100px;
+      margin: 0 auto;
+    }
+  }
+  span {
+    text-align: center !important;
+    font-size: 15px;
+    display: block;
   }
 }
 

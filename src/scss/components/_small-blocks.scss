@@ -101,7 +101,7 @@
 }
 
 
-.c-image-caption {
+.c-image-caption, .wp-element-caption {
     z-index: 10;
     position: absolute;
     color: #fff;
@@ -112,10 +112,15 @@
     left: 0;
     bottom: 0;
     text-align: center;
+    margin-bottom: 0;
     p {
        margin: 0;
        font-style: italic;
     }
+ }
+
+ .wp-element-caption {
+   text-align: left;
  }
  
  .c-image-caption-full {
@@ -137,10 +142,12 @@
 
  .c-hover-text-wrapper {
    overflow: hidden;
+   cursor: help;
  }
 
  .c-hover-text {
    position: absolute;
+   width: 100%; 
   bottom: 0;
   color: #fff;
   background: rgba(0,0,0,0.8);
@@ -149,3 +156,120 @@
    font-size: 16px;
   }
  }
+
+.c-hover-text-wrapper {
+  position: relative;
+  
+  // Corner indicator
+  &::after {
+    content: '?'; 
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #333;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  // Hover effects
+&:hover {
+  &::after {
+    opacity: 0;
+  }
+}
+
+}
+
+// Alternative version with dots
+
+
+.c-hover-text {
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+// Modern Tooltips
+.c-page-footer-topper-cert {
+    div {
+        position: relative;
+        display: inline-block;
+        cursor: help;
+
+        span {
+            visibility: hidden;
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #333;
+            text-align: center;
+            padding: 8px 16px;
+            border-radius: 8px;
+            position: absolute;
+            z-index: 1;
+            bottom: 130%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                       0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                border-width: 6px;
+                border-style: solid;
+                border-color: rgba(255, 255, 255, 0.95) transparent transparent transparent;
+                transition: left 0.3s;
+            }
+        }
+
+        &[data-position="left"] span {
+            &::after {
+                left: 20px;
+                transform: translateX(0);
+            }
+        }
+
+        &[data-position="right"] span {
+            &::after {
+                left: auto;
+                right: 20px;
+                transform: translateX(0);
+            }
+        }
+
+        &:hover span {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+
+            &[data-position="left"],
+            [data-position="left"] & {
+                transform: translateY(0);
+            }
+
+            &[data-position="right"],
+            [data-position="right"] & {
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+
