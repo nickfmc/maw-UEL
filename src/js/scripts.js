@@ -270,6 +270,67 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// better accessible dropdown menu
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdownButtons = document.querySelectorAll('.dropdown-toggle');
+  
+  dropdownButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+          e.preventDefault();
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !isExpanded);
+          
+          // Toggle submenu visibility
+          const submenu = this.parentElement.querySelector('ul');
+          if (submenu) {
+              submenu.classList.toggle('is-active');
+          }
+      });
+  });
+  
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', function(e) {
+      if (!e.target.closest('.menu-item-has-children')) {
+          dropdownButtons.forEach(button => {
+              button.setAttribute('aria-expanded', 'false');
+              const submenu = button.parentElement.querySelector('ul');
+              if (submenu) {
+                  submenu.classList.remove('is-active');
+              }
+          });
+      }
+  });
+});
+//END better accessible dropdown menu
+
+const hoverTextWrappers = document.querySelectorAll('.c-hover-text-wrapper');
+
+hoverTextWrappers.forEach(wrapper => {
+    const tooltip = wrapper.querySelector('.c-hover-text');
+    
+    wrapper.addEventListener('focus', () => {
+        if (tooltip) {
+            tooltip.style.transform = 'translateY(0)';
+            tooltip.style.opacity = '1';
+            tooltip.style.visibility = 'visible';
+            wrapper.setAttribute('aria-expanded', 'true');
+            tooltip.setAttribute('aria-hidden', 'false');
+        }
+    });
+
+    wrapper.addEventListener('blur', () => {
+        if (tooltip) {
+            tooltip.style.transform = 'translateY(100%)';
+            tooltip.style.opacity = '0';
+            tooltip.style.visibility = 'hidden';
+            wrapper.setAttribute('aria-expanded', 'false');
+            tooltip.setAttribute('aria-hidden', 'true');
+        }
+    });
+});
+
+
+
 
 // *********************** START CUSTOM JQUERY DOC READY SCRIPTS *******************************
 jQuery( document ).ready(function( $ ) {

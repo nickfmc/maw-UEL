@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="o-layout-row">
-  <main class="o-wrapper-wide" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/WebPageElement">
+  <main id="main-content" class="o-wrapper-wide" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/WebPageElement">
 
     <h1 class=""><span>Search Results for:</span> <?php echo esc_attr(get_search_query()); ?></h1>
     

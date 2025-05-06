@@ -140,62 +140,64 @@
     }
  }
 
- .c-hover-text-wrapper {
-   overflow: hidden;
-   cursor: help;
- }
 
- .c-hover-text {
-   position: absolute;
-   width: 100%; 
+
+
+.c-hover-text-wrapper {
+   overflow: hidden;
+   position: relative;
+   flex: 1;
+   min-height: 0;
+  aspect-ratio: 4/3;
+
+   figure {
+    height: 100%;
+    margin: 0;
+   }
+   
+   img {
+     display: block;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     opacity: 1; // Ensure image is fully visible
+     visibility: visible; // Ensure image is visible
+   }
+}
+
+.c-hover-text {
+  position: absolute;
+  width: 100%;
   bottom: 0;
   color: #fff;
   background: rgba(0,0,0,0.8);
   padding: 15px 20px 0px;
-  p {
-   font-size: 16px;
-  }
- }
-
-.c-hover-text-wrapper {
-  position: relative;
-  
-  // Corner indicator
-  &::after {
-    content: '?'; 
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    color: #333;
-    background: rgba(255, 255, 255, 0.9);
-    border: 2px solid rgba(255, 255, 255, 0.95);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  // Hover effects
-&:hover {
-  &::after {
-    opacity: 0;
-  }
-}
-
-}
-
-// Alternative version with dots
-
-
-.c-hover-text {
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
   transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+   
+   p {
+     font-size: 16px;
+   }
 }
+
+.c-hover-text-wrapper:hover {
+   .c-hover-text {
+      transform: translateY(0); // Slide up on hover
+      opacity: 1 !important;
+      visibility: visible !important;
+   }
+   
+   &::after {
+      opacity: 0;
+   }
+}
+
+
+
+
+
 
 
 // Modern Tooltips

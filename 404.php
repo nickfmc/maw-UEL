@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
   <div class="o-layout-row">
-    <main class="o-wrapper-wide" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/WebPageElement">
+    <main class="o-wrapper-wide" id="main-content" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/WebPageElement">
       <section class="editor-content">
         <div class="c-404-layout alignwide">
           <div>

@@ -30,6 +30,34 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    .dropdown-toggle {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      position: absolute;
+      right: -2px;
+      top: 50%;
+      margin-top: 2px;
+      color: $color-secondary;
+      transform: translateY(-50%);
+      
+      &[aria-expanded="true"] {
+          svg {
+              transform: rotate(180deg);
+          }
+      }
+    }
+    .screen-reader-text {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+  }
   }
   .c-main-menu > li {
     margin: 0;
@@ -43,7 +71,7 @@
     font-size: 1rem;
     margin: 0;
     text-decoration: none;
-    padding: 42px 1rem;
+    padding: 42px 17px;
     &:first-of-type > a {
       padding-left: 0;
     }
@@ -51,6 +79,16 @@
       padding-right: 0;
     }
   }
+
+  .c-main-menu > li.menu-item-has-children > a {
+    padding-right: 22px;
+  }
+
+  .c-main-menu ul li a:focus {
+    outline: 1px dashed $color-primary; // Add a visible focus outline
+    outline-offset: -2px;
+  }
+
   .c-main-menu > li > a:hover {
     color: $color-primary;
   }
@@ -70,7 +108,8 @@
 // ++ menu style (drop down!) +++++++++++++++++++++++++++++++++
 @media (width >= $bp-large) {
   .c-main-menu li:hover ul, 
-  .c-main-menu li.focus ul {
+  .c-main-menu li:focus ul,
+  .c-main-menu .sub-menu.is-active {
     top: 100%;
     opacity: 1;
     visibility: visible;
@@ -107,7 +146,8 @@
     overflow: hidden;
   }
   .c-main-menu li:hover ul li,
-  .c-main-menu li.focus ul li {
+  .c-main-menu li:focus ul li,
+  .c-main-menu .sub-menu.is-active li {
     max-height: 140px;
   }
   .c-main-menu ul li a {

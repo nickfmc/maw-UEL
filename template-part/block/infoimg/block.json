@@ -1,0 +1,16 @@
+{
+    "name": "acf/infoimg",
+    "title": "Info Image",
+    "description": "Accessibility info Image",
+    "icon": "admin-comments",
+    "keywords": ["info", "image"],
+    "category": "myblocks",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "infoimg.php"
+    },
+    "example": {
+        "attributes": {}
+    },
+    "align": "full"
+}

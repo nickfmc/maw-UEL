@@ -77,6 +77,11 @@ html.has-modal-nav-open {
     }
 }
 
+.c-cl-mobile-nav button.c-modal-nav-button {
+        right: 7px;
+        top: 29px;
+}
+
 .c-cl-mobile-nav button.c-close-modal-nav {
         top: 20px !important;
         right: 20px !important;
@@ -142,7 +147,7 @@ html.has-modal-nav-open {
 }
 
 .c-modal-nav-logo {
-        width: 200px;
+        width: 132px;
 }
 
 .c-mobile-menu .sub-menu.open {

@@ -22,7 +22,13 @@
 </head>
 
 <body <?php body_class(pretty_body_class()); ?> itemscope itemtype="https://schema.org/WebPage">
-
+<!-- Skip links should be the first focusable elements -->
+<div class="skip-links" role="navigation" aria-label="Skip links navigation">
+    <a href="#main-content" class="skip-link" role="link" aria-label="Skip to main content">Skip to main content</a>
+    <a href="#site-navigation" class="skip-link" role="link" aria-label="Skip to main navigation">Skip to main navigation</a>
+    <a href="#c-page-footer" class="skip-link" role="link" aria-label="Skip to page footer">Skip to page footer</a>
+</div>
+<!-- END Skip links should be the first focusable elements -->
   <header id="c-page-header" class="o-section c-page-header" role="banner" itemscope itemtype="https://schema.org/WPHeader">
     
     <div class="o-wrapper-wide  u-relative">
@@ -53,7 +59,7 @@
             <div class="c-modal-nav-header">
               <div class="c-modal-nav-logo">
                 <a href="/" rel="nofollow">
-                  <img src="<?php bloginfo('template_url') ?>/img/logo-color.svg" alt="<?php bloginfo('name'); ?>" />
+                  <img src="<?php bloginfo('template_url') ?>/img/logo-colour.svg" alt="<?php bloginfo('name'); ?>" />
                 </a>
               </div> <!-- /c-main-logo -->
             </div>

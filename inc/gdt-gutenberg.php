@@ -69,9 +69,10 @@ function maw_register_guten_script() {
   add_action( 'init', 'maw_register_guten_script' );
 
 // Add ACF json blocks.
-
-function register_acf_blocks() { 
+function register_acf_blocks() {
   register_block_type(  get_stylesheet_directory() . '/template-part/block/fullimage/block.json' );
+  register_block_type(  get_stylesheet_directory() . '/template-part/block/infoimg/block.json' );
+
   // register_block_type(  get_stylesheet_directory() . '/template-part/block/swiper-material/block.json' );
   // register_block_type(  get_stylesheet_directory() . '/template-part/block/swiper-projects/block.json' );
 }
